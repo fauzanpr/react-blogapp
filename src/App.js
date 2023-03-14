@@ -1,23 +1,39 @@
 import Header from "./Header";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
 
 function App() {
-  const [blogs, setBlog] = useState([
-    { title: "Title 1", body: "lorem ipsum ...", author: "Mario", id: 1 },
-    { title: "Title 2", body: "lorem ipsum ...", author: "Evan", id:2 },
-    { title: "Title 3", body: "lorem ipsum ...", author: "Mario", id:3 },
-  ]);
+  const [blogs, setBlog] = useState(null);
+  const [isLoading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setInterval(() => {
+      fetch("http://localhost:8000/blogs")
+        .then((res) => {
+          if (res.status === 404) {
+            return false;
+          }
+          return res.json();
+        })
+        .then((data) => {
+          setLoading(false);
+          setBlog(data);
+        });
+    }, 1000);
+  }, []);
 
   const deleteHandler = (id) => {
-    const newBlogs = blogs.filter(blog => blog.id !== id);
+    const newBlogs = blogs.filter((blog) => blog.id !== id);
     setBlog(newBlogs);
   };
 
   return (
     <div className="container">
       <Header />
-      <BlogList title="Blogs" blogs={ blogs } deleteHandler={ deleteHandler } />
+      { isLoading && <p>Loading...</p> }
+      { (blogs === false && blogs !== null) ? <p>Not found</p> : (blogs && (
+        <BlogList title="Blogs" blogs={blogs} deleteHandler={deleteHandler} />
+      )) }
     </div>
   );
 }

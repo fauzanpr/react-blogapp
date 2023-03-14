@@ -1,0 +1,34 @@
+{
+    "blogs": [
+        {
+            "title": "My First Blog",
+            "body": "lorem ipsum bla bla bla",
+            "author": "Mario",
+            "id": 1
+        },
+        {
+            "title": "The Second Blog",
+            "body": "lorem ipsum sir amet",
+            "author": "Luigi",
+            "id": 2
+        },
+        {
+            "title": "The Third Blog",
+            "body": "lorem ipsum sir amet dolor",
+            "author": "Mario",
+            "id": 3
+        },
+        {
+            "title": "The Fourth Blog",
+            "body": "lorem ipsum sir amet dolor",
+            "author": "Mario",
+            "id": 4
+        },
+        {
+            "title": "The Fifth Blog",
+            "body": "lorem ipsum sir amet dolor",
+            "author": "Mario",
+            "id": 5
+        }
+    ] 
+}
