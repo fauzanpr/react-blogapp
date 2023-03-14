@@ -7,19 +7,17 @@ function App() {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    setInterval(() => {
-      fetch("http://localhost:8000/blogs")
-        .then((res) => {
-          if (res.status === 404) {
-            return false;
-          }
-          return res.json();
-        })
-        .then((data) => {
-          setLoading(false);
-          setBlog(data);
-        });
-    }, 1000);
+    fetch("http://localhost:8000/blogs")
+      .then((res) => {
+        if (res.status === 404) {
+          return false;
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setLoading(false);
+        setBlog(data);
+      });
   }, []);
 
   const deleteHandler = (id) => {
@@ -30,10 +28,14 @@ function App() {
   return (
     <div className="container">
       <Header />
-      { isLoading && <p>Loading...</p> }
-      { (blogs === false && blogs !== null) ? <p>Not found</p> : (blogs && (
-        <BlogList title="Blogs" blogs={blogs} deleteHandler={deleteHandler} />
-      )) }
+      {isLoading && <p>Loading...</p>}
+      {blogs === false && blogs !== null ? (
+        <p>Not found</p>
+      ) : (
+        blogs && (
+          <BlogList title="Blogs" blogs={blogs} deleteHandler={deleteHandler} />
+        )
+      )}
     </div>
   );
 }
