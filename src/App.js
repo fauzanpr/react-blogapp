@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import BlogDetails from "./Components/BlogDetails";
+import Create from "./Components/Create";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 
@@ -8,8 +10,14 @@ function App() {
       <div className="container">
         <Header />
         <Switch>
-          <Route path={'/'}>
+          <Route exact path={'/'}>
             <Home />
+          </Route>
+          <Route path={'/create'}>
+            <Create />
+          </Route>
+          <Route path={'/blog/:id'}>
+            <BlogDetails />
           </Route>
         </Switch>
       </div>
