@@ -1,34 +1,52 @@
 {
-    "blogs": [
-        {
-            "title": "My First Blog",
-            "body": "lorem ipsum bla bla bla",
-            "author": "Mario",
-            "id": 1
-        },
-        {
-            "title": "The Second Blog",
-            "body": "lorem ipsum sir amet",
-            "author": "Luigi",
-            "id": 2
-        },
-        {
-            "title": "The Third Blog",
-            "body": "lorem ipsum sir amet dolor",
-            "author": "Mario",
-            "id": 3
-        },
-        {
-            "title": "The Fourth Blog",
-            "body": "lorem ipsum sir amet dolor",
-            "author": "Mario",
-            "id": 4
-        },
-        {
-            "title": "The Fifth Blog",
-            "body": "lorem ipsum sir amet dolor",
-            "author": "Mario",
-            "id": 5
-        }
-    ] 
+  "blogs": [
+    {
+      "title": "My First Blog",
+      "body": "lorem ipsum bla bla bla",
+      "author": "Mario",
+      "id": 1
+    },
+    {
+      "title": "The Second Blog",
+      "body": "lorem ipsum sir amet",
+      "author": "Luigi",
+      "id": 2
+    },
+    {
+      "title": "The Third Blog",
+      "body": "lorem ipsum sir amet dolor",
+      "author": "Mario",
+      "id": 3
+    },
+    {
+      "title": "The Fourth Blog",
+      "body": "lorem ipsum sir amet dolor",
+      "author": "Mario",
+      "id": 4
+    },
+    {
+      "title": "The Fifth Blog",
+      "body": "lorem ipsum sir amet dolor",
+      "author": "Mario",
+      "id": 5
+    },
+    {
+      "title": "Blog Pertama dibuat",
+      "body": "hello world this is my first post yo",
+      "author": "mario",
+      "id": 6
+    },
+    {
+      "title": "Blog kedua yg dibuat",
+      "body": "Ini adalah blog kedua yang dibuat menggunakan fitur dalam aplikasi",
+      "author": "luigi",
+      "id": 7
+    },
+    {
+      "title": "Blog ketiga",
+      "body": "Ini adalah blog ketiga ygy",
+      "author": "mario",
+      "id": 8
+    }
+  ]
 }
