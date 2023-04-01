@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Form = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("mario");
   const [isPending, setIsPending] = useState(false);
+  const history = useHistory();
   const submitHandler = (e) => {
     e.preventDefault();
     setIsPending(true);
@@ -18,6 +20,7 @@ const Form = () => {
     }).then(() => {
       console.log("data is sent to the server");
       setIsPending(false);
+      history.push('/');
     });
   };
   return (
