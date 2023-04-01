@@ -1,11 +1,17 @@
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import useFetch from "../Hooks/useFetch";
 
 const BlogDetails = () => {
   const { id } = useParams();
+  const history = useHistory();
   console.log("id in details : " + id);
   const { data } = useFetch(`http://localhost:8000/blogs/${id}`);
-  console.log(data);
+  const deleteHandler = () => {
+    fetch(`http://localhost:8000/blogs/${id}`, {
+      method: 'DELETE'
+    });
+    history.push('/');
+  };
   return (
     <div className="">
       {data && (
@@ -15,6 +21,7 @@ const BlogDetails = () => {
           <br />
           <br />
           <p>{data.body}</p>
+          <button className="btn-form mg" onClick={deleteHandler}>Delete</button>
         </div>
       )}
     </div>

@@ -113,3 +113,7 @@ body {
 .btn-form:hover {
   background-color: #ff8eb0;
 }
+
+.mg {
+  margin: 5rem 0;
+}
