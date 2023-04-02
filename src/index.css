@@ -117,3 +117,23 @@ body {
 .mg {
   margin: 5rem 0;
 }
+
+.not-found {
+  width: fit-content;
+  margin: auto;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.back-home:visited, .back-home:link {
+  text-decoration: none;
+  color: #ff719c;
+  display: block;
+  width: fit-content;
+  margin: auto;
+}
+
+.back-home:hover {
+  color: #ff8eb0;
+  text-decoration: underline;
+}

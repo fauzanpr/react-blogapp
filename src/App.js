@@ -3,6 +3,7 @@ import BlogDetails from "./Components/BlogDetails";
 import Create from "./Components/Create";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
+import NotFound from "./Components/NotFound";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path={'/blog/:id'}>
             <BlogDetails />
+          </Route>
+          <Route path={'*'}>
+            <NotFound />
           </Route>
         </Switch>
       </div>
